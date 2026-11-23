@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "TrustLens",
+  "version": "0.1.0",
+  "description": "Checks links before you open them and warns you about suspicious or malicious destinations.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+
+  "permissions": [
+    "webNavigation",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["warning.html", "warning.js", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

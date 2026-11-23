@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustLens</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="tl-popup">
+    <div class="tl-popup-header">
+      <img src="icons/icon48.png" alt="" width="24" height="24" />
+      <h1 style="font-size: 16px; margin: 0;">TrustLens</h1>
+    </div>
+
+    <div class="tl-panel">
+      <div class="tl-field-label">This tab</div>
+      <div id="tl-badge-slot" style="margin: 6px 0 10px 0;"></div>
+      <div class="tl-field-label">Checked URL</div>
+      <div id="tl-url" class="tl-mono" style="margin-bottom: 8px;"></div>
+      <div id="tl-reasons-slot"></div>
+    </div>
+
+    <p class="tl-muted" style="margin-top: 10px;">
+      Detection is not implemented yet in this build — verdicts shown here
+      are placeholders, not real safety assessments.
+    </p>
+
+    <button class="tl-footer-link" id="tl-options-link" type="button" style="background: none; border: none; padding: 0; cursor: pointer; text-align: left; font-family: inherit;">Backend settings</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

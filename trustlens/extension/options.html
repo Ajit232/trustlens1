@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustLens Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="tl-options">
+    <h1 style="font-size: 20px;">TrustLens settings</h1>
+    <p class="tl-muted">
+      Configure which backend this extension talks to. Detection is not
+      implemented yet — this only controls where connectivity checks are
+      sent.
+    </p>
+
+    <form id="tl-options-form">
+      <div class="tl-form-row">
+        <label class="tl-field-label" for="tl-api-base-url">Backend API base URL</label>
+        <input
+          class="tl-input"
+          id="tl-api-base-url"
+          type="url"
+          placeholder="http://localhost:8000"
+          required
+        />
+      </div>
+      <button class="tl-btn tl-btn--primary" type="submit">Save</button>
+      <div id="tl-status" class="tl-status-msg" role="status"></div>
+    </form>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

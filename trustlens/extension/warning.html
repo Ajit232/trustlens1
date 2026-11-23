@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TrustLens — Warning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="tl-warning-page">
+    <div class="tl-warning-card">
+      <div class="tl-warning-eyebrow">TrustLens</div>
+      <div id="tl-badge-slot" style="margin-bottom: 10px;"></div>
+      <h2 id="tl-heading">This link needs a second look</h2>
+      <p id="tl-summary" class="tl-muted"></p>
+
+      <div class="tl-field-label">Destination</div>
+      <div id="tl-url" class="tl-url-box tl-mono"></div>
+
+      <div class="tl-field-label">Why TrustLens flagged this</div>
+      <ul id="tl-reasons" class="tl-reasons"></ul>
+
+      <div class="tl-actions">
+        <button class="tl-btn tl-btn--primary" id="tl-go-back" type="button">Go back</button>
+        <button class="tl-btn tl-btn--danger-outline" id="tl-continue" type="button">Continue anyway</button>
+      </div>
+
+      <p class="tl-disclaimer">
+        A secure padlock or HTTPS on this site does not mean it is safe —
+        TrustLens does not treat HTTPS as a safety signal. Detection logic
+        is not implemented yet in this build; this page is currently shown
+        only for manual testing, not from real navigation checks.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="warning.js"></script>
+</body>
+</html>
